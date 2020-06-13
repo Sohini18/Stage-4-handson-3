@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="emp0" class="com.cognizant.springlearn.model.Employee"
+		scope="prototype">
+		<property name="id" value="851473" />
+		<property name="name" value="Nayan" />
+		<property name="salary" value="27000" />
+		<property name="department" value="IT" />
+	</bean>
+	<bean id="emp1" class="com.cognizant.springlearn.model.Employee"
+		scope="prototype">
+		<property name="id" value="851474" />
+		<property name="name" value="Sourav" />
+		<property name="salary" value="27000" />
+		<property name="department" value="IT" />
+	</bean>
+	<bean id="emp2" class="com.cognizant.springlearn.model.Employee"
+		scope="prototype">
+			<property name="id" value="851475" />
+		<property name="name" value="Nisha Di" />
+		<property name="salary" value="27000" />
+		<property name="department" value="IT" />
+	</bean>
+	<bean id="emp3" class="com.cognizant.springlearn.model.Employee"
+		scope="prototype">
+			<property name="id" value="851476" />
+		<property name="name" value="Nilu" />
+		<property name="salary" value="27000" />
+		<property name="department" value="IT" />
+	</bean>
+	<bean id="employeeList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="emp0"></ref>
+				<ref bean="emp1"></ref>
+				<ref bean="emp2"></ref>
+				<ref bean="emp3"></ref>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	
+	
+	
+	
+	
+	<bean id="dept0" class="com.cognizant.springlearn.model.Department"
+		scope="prototype">
+		<property name="id" value="100" />
+		<property name="name" value="IT" />
+		<property name="location" value="Chandannagar" />
+	</bean>
+	<bean id="dept1" class="com.cognizant.springlearn.model.Department"
+		scope="prototype">
+		<property name="id" value="101" />
+		<property name="name" value="IT" />
+		<property name="location" value="Konnogar" />
+	</bean>
+	<bean id="departmentList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="dept0"></ref>
+				<ref bean="dept1"></ref>
+			</list>
+		</constructor-arg>
+	</bean>
+
+
+</beans>
